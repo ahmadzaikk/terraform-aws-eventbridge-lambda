@@ -8,6 +8,12 @@ variable "event_bus_name" {
   default     = "default"
   description = "Name  (e.g. `app` or `cluster`)."
 }
+
+variable "role_arn" {
+  type        = string
+  default     = ""
+  description = "Name  (e.g. `app` or `cluster`)."
+}
 variable "allow_events_bridge_to_run_lambda" {
   default     = true
   description = "Set to `false` to prevent the module from creating any resources"
