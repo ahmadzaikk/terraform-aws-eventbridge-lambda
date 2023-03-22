@@ -41,11 +41,7 @@ variable "statement_id" {
   default     = ""
   description = "Name  (statement_id)."
 }
-variable "tags" {
-  type        = map(any)
-  default     = {}
-  description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)."
-}
+
 
 variable "principals" {
   description = "(Required) list of AWS Accounts"
