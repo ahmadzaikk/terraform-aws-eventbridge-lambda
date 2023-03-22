@@ -36,8 +36,13 @@ variable "description" {
 
 variable "schedule_expression" {
   type        = string
-  default     = "cron schedule"
+  default     = ""
   description = "Name  (e.g. `app` or `cluster`)."
+}
+variable "event_pattern" {
+  type        = string
+  default     = ""
+  description = "Name  (event_pattern`)."
 }
 
 variable "arn" {
