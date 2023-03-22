@@ -8,6 +8,12 @@ variable "bus_name" {
   default     = ""
   description = "Name  (e.g. `app` or `cluster`)."
 }
+
+variable "statement_id" {
+  type        = string
+  default     = ""
+  description = "Name  (statement_id)."
+}
 variable "tags" {
   type        = map(any)
   default     = {}
