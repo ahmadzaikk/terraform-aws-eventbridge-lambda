@@ -8,6 +8,11 @@ variable "allow_events_bridge_to_run_lambda" {
   description = "Set to `false` to prevent the module from creating any resources"
   type        = bool
 }
+variable "create_bus" {
+  default     = false
+  description = "Set to `false` to prevent the module from creating any resources"
+  type        = bool
+}
 variable "bus_name" {
   type        = string
   default     = ""
