@@ -33,4 +33,5 @@ resource "aws_cloudwatch_event_permission" "accounts" {
 
   principal    = each.value
   statement_id = each.key
+  depends_on = [aws_cloudwatch_event_bus.this]
 }
