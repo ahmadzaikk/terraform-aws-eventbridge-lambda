@@ -27,11 +27,11 @@ resource "aws_cloudwatch_event_bus" "this" {
   tags = var.tags
 }
 
-resource "aws_cloudwatch_event_permission" "accounts" {
-  for_each = var.principals
-  event_bus_name = aws_cloudwatch_event_bus.this.name
+#resource "aws_cloudwatch_event_permission" "accounts" {
+ # for_each = var.principals
+  #event_bus_name = aws_cloudwatch_event_bus.this.name
 
-  principal    = each.value
-  statement_id = each.key
-  depends_on = [aws_cloudwatch_event_bus.this]
-}
+  #principal    = each.value
+  #statement_id = each.key
+  #depends_on = [aws_cloudwatch_event_bus.this]
+#}
