@@ -1,9 +1,9 @@
 resource "aws_cloudwatch_event_rule" "schedule" {
     name = var.name
-    #event_bus_name = aws_cloudwatch_event_bus.this.name
+    event_bus_name = aws_cloudwatch_event_bus.this.name
     description = var.description
     schedule_expression = var.schedule_expression
-    #depends_on = [aws_cloudwatch_event_bus.this]
+    depends_on = [aws_cloudwatch_event_bus.this]
 }
 
 resource "aws_cloudwatch_event_target" "schedule_lambda" {
@@ -27,11 +27,11 @@ resource "aws_cloudwatch_event_bus" "this" {
   tags = var.tags
 }
 
-#resource "aws_cloudwatch_event_permission" "accounts" {
- # for_each = var.principals
-  #event_bus_name = aws_cloudwatch_event_bus.this.name
+resource "aws_cloudwatch_event_permission" "accounts" {
+  for_each = var.principals
+  event_bus_name = aws_cloudwatch_event_bus.this.name
 
-  #principal    = each.value
-  #statement_id = each.key
-  #depends_on = [aws_cloudwatch_event_bus.this]
-#}
+  principal    = each.value
+  statement_id = each.key
+  depends_on = [aws_cloudwatch_event_bus.this]
+}
