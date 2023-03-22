@@ -24,3 +24,10 @@ resource "aws_cloudwatch_event_bus" "this" {
   name = var.bus_name
   tags = var.tags
 }
+
+resource "aws_cloudwatch_event_permission" "accounts" {
+  for_each = var.principals
+
+  principal    = each.value
+  statement_id = each.key
+}
