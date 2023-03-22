@@ -12,6 +12,7 @@ resource "aws_cloudwatch_event_target" "schedule_lambda" {
     event_bus_name = var.event_bus_name
     target_id = "processing_lambda"
     arn = var.arn
+    role_arn = var.role_arn
 }
 
 
