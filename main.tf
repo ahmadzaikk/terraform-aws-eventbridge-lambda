@@ -32,7 +32,6 @@ resource "aws_cloudwatch_event_bus" "this" {
 }
 
 resource "aws_cloudwatch_event_permission" "accounts" {
-  count = var.create_bus ? 1 : 0
   for_each = var.principals
   event_bus_name = var.event_bus_name
 
