@@ -3,7 +3,11 @@ variable "name" {
   default     = ""
   description = "Name  (e.g. `app` or `cluster`)."
 }
-
+variable "bus_name" {
+  type        = string
+  default     = ""
+  description = "Name  (e.g. `app` or `cluster`)."
+}
 variable "tags" {
   type        = map(any)
   default     = {}
