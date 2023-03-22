@@ -3,6 +3,11 @@ variable "name" {
   default     = ""
   description = "Name  (e.g. `app` or `cluster`)."
 }
+variable "event_bus_name" {
+  type        = string
+  default     = "default"
+  description = "Name  (e.g. `app` or `cluster`)."
+}
 variable "allow_events_bridge_to_run_lambda" {
   default     = true
   description = "Set to `false` to prevent the module from creating any resources"
