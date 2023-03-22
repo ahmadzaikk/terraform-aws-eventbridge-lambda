@@ -9,6 +9,7 @@ resource "aws_cloudwatch_event_rule" "schedule" {
 
 resource "aws_cloudwatch_event_target" "schedule_lambda" {
     rule = aws_cloudwatch_event_rule.schedule.name
+    event_bus_name = aws_cloudwatch_event_bus.this.name
     target_id = "processing_lambda"
     arn = var.arn
 }
