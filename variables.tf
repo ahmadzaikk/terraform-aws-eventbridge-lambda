@@ -179,11 +179,6 @@ variable "rules" {
   default     = {}
 }
 
-variable "targets" {
-  description = "A map of objects with EventBridge Target definitions."
-  type        = any
-  default     = {}
-}
 
 variable "archives" {
   description = "A map of objects with the EventBridge Archive definitions."
