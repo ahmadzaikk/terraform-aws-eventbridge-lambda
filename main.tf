@@ -25,6 +25,7 @@ resource "aws_lambda_permission" "allow_events_bridge_to_run_lambda" {
 
 resource "aws_cloudwatch_event_bus" "this" {
   #count = var.create && var.create_bus ? 1 : 0
+  count = var.create_bus ? 1 : 0
 
   name = var.bus_name
   tags = var.tags
