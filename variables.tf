@@ -111,11 +111,7 @@ variable "append_destination_postfix" {
   default     = true
 }
 
-variable "create_bus" {
-  description = "Controls whether EventBridge Bus resource should be created"
-  type        = bool
-  default     = true
-}
+
 
 variable "create_rules" {
   description = "Controls whether EventBridge Rule resources should be created"
