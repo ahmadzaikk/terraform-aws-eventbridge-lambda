@@ -3,6 +3,7 @@ resource "aws_cloudwatch_event_rule" "schedule" {
     event_bus_name = aws_cloudwatch_event_bus.this.name
     description = var.description
     schedule_expression = var.schedule_expression
+    depends_on = [aws_cloudwatch_event_bus.this]
 }
 
 resource "aws_cloudwatch_event_target" "schedule_lambda" {
