@@ -9,6 +9,12 @@ variable "event_bus_name" {
   description = "Name  (e.g. `app` or `cluster`)."
 }
 
+variable "targets" {
+  description = "A map of objects with EventBridge Target definitions."
+  type        = any
+  default     = {}
+}
+
 variable "role_arn" {
   type        = string
   default     = ""
