@@ -14,6 +14,14 @@ variable "tags" {
   description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)."
 }
 
+variable "principals" {
+  description = "(Required) list of AWS Accounts"
+  type        = map(string)
+  default     = {
+    "chs-dev"  = "944706592399"
+  }
+}
+
 variable "description" {
   type        = string
   default     = "Event rule to invoke lambda"
