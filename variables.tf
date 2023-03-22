@@ -157,11 +157,6 @@ variable "create_schemas_discoverer" {
 
 #######################
 
-variable "bus_name" {
-  description = "A unique name for your EventBridge Bus"
-  type        = string
-  default     = "default"
-}
 
 variable "schemas_discoverer_description" {
   description = "Default schemas discoverer description"
