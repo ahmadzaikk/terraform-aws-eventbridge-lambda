@@ -31,7 +31,7 @@ locals {
   ])
 }
 
-resource "aws_cloudwatch_event_rule" "schedule" {
+resource "aws_cloudwatch_event_rule" "this" {
     name = var.name
     event_bus_name = var.event_bus_name
     description = var.description
@@ -41,7 +41,7 @@ resource "aws_cloudwatch_event_rule" "schedule" {
 }
 
 #resource "aws_cloudwatch_event_target" "schedule_lambda" {
- #   rule = aws_cloudwatch_event_rule.schedule.name
+ #   rule = aws_cloudwatch_event_rule.this.name
   #  event_bus_name = var.event_bus_name
    # target_id = "processing_lambda"
     #arn = var.arn
